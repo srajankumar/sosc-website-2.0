@@ -44,7 +44,7 @@ const Footer = () => {
               id="svg17"
             >
               <g
-                clip-path="url(#clip0_414_202)"
+                clipPath="url(#clip0_414_202)"
                 id="g10"
                 transform="translate(-11.7593,-51.28603)"
               >

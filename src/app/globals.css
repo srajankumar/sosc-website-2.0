@@ -8,6 +8,10 @@
   font-family: "Montserrat", sans-serif;
 }
 
+body{
+  /* cursor:none; */
+}
+
 ::-webkit-scrollbar {
   width: 7px;
   height: 3px;
@@ -24,4 +28,9 @@
 
 ::-webkit-scrollbar-thumb:hover {
   background: #6eff07c7;
+}
+
+
+.skillsText{
+   transition:opacity 0.5s ease-in-out;
 }

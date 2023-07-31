@@ -1,6 +1,8 @@
+import ScrollObserver from '@/hooks/use-scroll-observer'
 import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
+import Cursor from '@/components/Cursor'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -16,7 +18,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <Cursor/>
+        <ScrollObserver>
+        {children}
+        </ScrollObserver>
+      </body>
     </html>
   )
 }
