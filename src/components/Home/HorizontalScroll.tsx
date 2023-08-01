@@ -48,7 +48,9 @@ function HorizontailScroll() {
             ref={scroll}
             className="scroll-part  px-12 w-screen h-full bg-transparent ns-horizontal-section__item flex items-center z-50"
           >
-            <img
+            <Image
+              width={500}
+              height={500}
               src="https://images.unsplash.com/photo-1618336753974-aae8e04506aa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
               alt="1st image"
               className="max-w-[70vw] max-h-[60vh] m-auto object-contain"
@@ -58,7 +60,9 @@ function HorizontailScroll() {
             ref={scroll}
             className="scroll-part px-12 w-screen h-full bg-transparent ns-horizontal-section__item flex items-center z-50"
           >
-            <img
+            <Image
+              width={500}
+              height={500}
               src="https://images.unsplash.com/photo-1618336753974-aae8e04506aa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
               alt="2ndimage"
               className="max-w-[70vw] max-h-[60vh] m-auto object-contain"
@@ -68,7 +72,9 @@ function HorizontailScroll() {
             ref={scroll}
             className="scroll-part  px-12 w-screen h-full bg-transparent ns-horizontal-section__item flex items-center z-50"
           >
-            <img
+            <Image
+              width={500}
+              height={500}
               src="https://images.unsplash.com/photo-1618336753974-aae8e04506aa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
               alt="2ndimage"
               className="max-w-[70vw] max-h-[60vh] m-auto object-contain"
@@ -78,7 +84,9 @@ function HorizontailScroll() {
             ref={scroll}
             className="scroll-part  px-12 w-screen h-full bg-transparent ns-horizontal-section__item flex items-center z-50"
           >
-            <img
+            <Image
+              width={500}
+              height={500}
               src="https://images.unsplash.com/photo-1618336753974-aae8e04506aa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
               alt="2ndimage"
               className="max-w-[70vw] max-h-[60vh] m-auto object-contain"

@@ -1,6 +1,5 @@
 "use client";
 import React, { useEffect } from "react";
-// import "./MyComponent.css"; // Make sure to import your CSS file
 
 import Rotate from "react-reveal/Rotate";
 
