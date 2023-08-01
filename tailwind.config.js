@@ -9,6 +9,7 @@ module.exports = {
     extend: {
       fontFamily: {
         montserrat: "Montserrat",
+        Poppins: "Poppins",
       },
       colors: {
         chartreuse: {
