@@ -2,8 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+@layer base {
+  @font-face {
+    font-family: "Montserrat-Regular";
+    src: url("/fonts/Montserrat/static/Montserrat-Regular.ttf");
+  }
+  @font-face {
+    font-family: "Montserrat-Bold";
+    src: url("/fonts/Montserrat/static/Montserrat-Bold.ttf");
+  }
+}
 
 ::-webkit-scrollbar {
   width: 7px;

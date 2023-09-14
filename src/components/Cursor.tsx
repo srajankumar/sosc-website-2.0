@@ -1,6 +1,6 @@
-"use client"
-import React, { useEffect, useRef } from 'react';
-import gsap from 'gsap';
+"use client";
+import React, { useEffect, useRef } from "react";
+import gsap from "gsap";
 
 export default function Cursor() {
   const cursorRef = useRef<HTMLDivElement>(null);
@@ -13,45 +13,46 @@ export default function Cursor() {
     }
 
     const onMouseMove = (e: MouseEvent) => {
-      cursor.style.top = e.pageY - 10 + 'px';
-      cursor.style.left = e.pageX - 10 + 'px';
+      cursor.style.transform = `translate(${e.clientX - 10}px, ${
+        e.clientY - 10
+      }px)`;
 
       const target = e.target as HTMLElement;
       const targetBgColor = getComputedStyle(target).backgroundColor;
-      cursor.style.backgroundColor = isBlack(targetBgColor) ? 'white' : 'black';
+      cursor.style.backgroundColor = isBlack(targetBgColor) ? "white" : "black";
     };
 
     const onClick = () => {
-      cursor.classList.add('expand');
+      cursor.classList.add("expand");
       setTimeout(() => {
-        cursor.classList.remove('expand');
+        cursor.classList.remove("expand");
       }, 500);
     };
 
     const onMouseDown = () => {
-      cursor.classList.add('expand');
+      cursor.classList.add("expand");
       setTimeout(() => {
-        cursor.classList.remove('expand');
+        cursor.classList.remove("expand");
       }, 500);
     };
 
     const onMouseUp = () => {
-      cursor.classList.add('expand');
+      cursor.classList.add("expand");
       setTimeout(() => {
-        cursor.classList.remove('expand');
+        cursor.classList.remove("expand");
       }, 500);
     };
 
-    document.addEventListener('mousemove', onMouseMove);
-    document.addEventListener('click', onClick);
-    document.addEventListener('mousedown', onMouseDown);
-    document.addEventListener('mouseup', onMouseUp);
+    document.addEventListener("mousemove", onMouseMove);
+    document.addEventListener("click", onClick);
+    document.addEventListener("mousedown", onMouseDown);
+    document.addEventListener("mouseup", onMouseUp);
 
     return () => {
-      document.removeEventListener('mousemove', onMouseMove);
-      document.removeEventListener('click', onClick);
-      document.removeEventListener('mousedown', onMouseDown);
-      document.removeEventListener('mouseup', onMouseUp);
+      document.removeEventListener("mousemove", onMouseMove);
+      document.removeEventListener("click", onClick);
+      document.removeEventListener("mousedown", onMouseDown);
+      document.removeEventListener("mouseup", onMouseUp);
     };
   }, []);
 
@@ -67,9 +68,10 @@ export default function Cursor() {
   return (
     <div
       ref={cursorRef}
-      className='fixed top-0 left-0 w-10 h-10 rounded-full pointer-events-none z-50 mix-blend-difference p-4 flex justify-center items-center bg-black'
+      className="fixed w-10 h-10 rounded-full pointer-events-none z-50 mix-blend-difference p-4 flex justify-center items-center bg-black"
+      style={{ transform: "translate(-50%, -50%)" }}
     >
-      <span className='text-sm text-white font-bold'>View</span>
+      <span className="text-sm text-white font-bold">View</span>
     </div>
   );
 }
