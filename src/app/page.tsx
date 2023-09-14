@@ -3,9 +3,11 @@ import HorizontalScroll from "@/components/Home/HorizontalScroll";
 import Image from "next/image";
 import TextScroll from "@/components/Home/TextScroll";
 import Hero from "@/components/Home/Hero";
+import Navbar from "@/components/Navbar";
 export default function Home() {
   return (
     <div>
+      <Navbar />
       <div className="h-screen bg-black">
         <Hero />
       </div>

@@ -98,8 +98,8 @@ const MyComponent = () => {
   }, []);
 
   return (
-    <div className="bg-black container">
-      <div className="hero-image absolute h-screen w-full top-0 flex items-center justify-center bg-black">
+    <div className="container">
+      <div className="hero-image absolute h-screen w-full top-0 flex items-center justify-center">
         <div className="wrapper-img w-full my-0 mx-auto relative overflow-hidden bg-black">
           <div className="box bg-black"></div>
           <div className="bg-black">
@@ -199,6 +199,38 @@ const MyComponent = () => {
             </Rotate>
           </div>
         </div>
+      </div>{" "}
+      <div className="text-white flex justify-center w-full absolute bottom-10">
+        <Rotate bottom left delay={7800}>
+          {" "}
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="50"
+            height="50"
+            viewBox="0 0 24 24"
+          >
+            <g
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+            >
+              <path
+                fill="currentColor"
+                d="M12 4 h2 v6 h2.5 L12 14.5M12 4 h-2 v6 h-2.5 L12 14.5"
+              >
+                <animate
+                  attributeName="d"
+                  calcMode="linear"
+                  dur="1.5s"
+                  keyTimes="0;0.7;1"
+                  repeatCount="indefinite"
+                  values="M12 4 h2 v6 h2.5 L12 14.5M12 4 h-2 v6 h-2.5 L12 14.5;M12 4 h2 v3 h2.5 L12 11.5M12 4 h-2 v3 h-2.5 L12 11.5;M12 4 h2 v6 h2.5 L12 14.5M12 4 h-2 v6 h-2.5 L12 14.5"
+                />
+              </path>
+            </g>
+          </svg>
+        </Rotate>
       </div>
     </div>
   );
