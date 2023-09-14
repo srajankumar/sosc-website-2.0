@@ -8,7 +8,10 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        montserrat: "Montserrat",
+        montserratR: ["Montserrat-Regular", "mono"],
+        montserratB: ["Montserrat-Bold", "mono"],
+
+        Poppins: "Poppins",
       },
       colors: {
         chartreuse: {
