@@ -60,25 +60,25 @@ const Navbar = () => {
           </Link>
           <nav className="flex flex-wrap items-center py-2 md:py-0 md:w-auto px-[1rem] md:px-0 w-full justify-between text-base md:justify-center">
             <Link
-              href="/events"
+              href="/"
               className="hover:underline decoration-chartreuse-100 md:ml-10 lg:ml-20 underline-offset-8 py-1 bg-black rounded-full flex justify-center text-white"
             >
               Events
             </Link>
             <Link
-              href="/events"
+              href="/"
               className="hover:underline decoration-chartreuse-100 md:ml-10 lg:ml-20 underline-offset-8 py-1 bg-black rounded-full flex justify-center text-white"
             >
               Gallery
             </Link>
             <Link
-              href="/blogs"
+              href="/"
               className="hover:underline decoration-chartreuse-100 md:ml-10 lg:ml-20 underline-offset-8 py-1 bg-black rounded-full flex justify-center text-white"
             >
               Blogs
             </Link>
             <Link
-              href="/team"
+              href="/"
               className="hover:underline decoration-chartreuse-100 md:ml-10 lg:ml-20 underline-offset-8 py-1 bg-black rounded-full flex justify-center text-white"
             >
               Team

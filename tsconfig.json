@@ -28,7 +28,11 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "src/components/Hero.jsx"
+    "src/components/Hero.jsx",
+    "src/components/Home/Hero.jsx",
+    "src/app/test/page.jsx",
+    "src/app/test/page.jsx",
+    "src/app/test/page.jsx"
   ],
   "exclude": ["node_modules"]
 }
