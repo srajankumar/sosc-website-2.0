@@ -71,7 +71,9 @@ export default function Cursor() {
       className="fixed w-10 h-10 rounded-full pointer-events-none z-50 mix-blend-difference p-4 flex justify-center items-center bg-black"
       style={{ transform: "translate(-50%, -50%)" }}
     >
-      <span className="text-sm text-white font-bold">View</span>
+      <span className="text-sm px-5 h-11 bg-white rounded-full text-white font-bold">
+        .
+      </span>
     </div>
   );
 }
