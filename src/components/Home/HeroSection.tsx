@@ -1,5 +1,5 @@
 import { forwardRef, Ref } from "react";
-
+import Link from "next/link";
 type HeroSectionProps = {};
 
 const HeroSection = forwardRef<HTMLOptionElement, HeroSectionProps>(
@@ -22,9 +22,12 @@ const HeroSection = forwardRef<HTMLOptionElement, HeroSectionProps>(
                 open-source ecosystem by providing training and skill
                 development.
               </p>
-              <div className="md:grow clip-path opacity-0 translate-y-24 form flex mt-7 text-sm justify-center rounded-full items-center bg-chartreuse-200 text-black w-[7.25rem] h-[2.125rem]">
+              <Link
+                href="/"
+                className="md:grow clip-path opacity-0 translate-y-24 form flex mt-7 text-sm justify-center rounded-full items-center bg-chartreuse-200 text-black w-[7.25rem] h-[2.125rem]"
+              >
                 Learn More
-              </div>
+              </Link>
             </div>
           </div>
         </section>

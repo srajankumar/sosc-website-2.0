@@ -15,9 +15,9 @@
   }
 }
 
-body {
+/* body {
   cursor: none;
-}
+} */
 
 ::-webkit-scrollbar {
   width: 7px;
