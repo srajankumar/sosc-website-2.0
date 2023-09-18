@@ -1,4 +1,3 @@
-import Footer from "@/components/Footer";
 import HorizontalScroll from "@/components/Home/HorizontalScroll";
 import TextScroll from "@/components/Home/TextScroll";
 import Hero from "@/components/Home/Hero";
@@ -15,7 +14,6 @@ export default function Home() {
       <About />
       <TextScroll />
       <Team />
-      <Footer />
     </div>
   );
 }
