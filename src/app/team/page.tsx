@@ -1,90 +1,148 @@
-import MemberCard from "@/components/Team/MemberCard"; // Adjust the import path as needed
+import getPostMetadata from "@/components/getPostMetadata";
+import PostPreview from "@/components/PostPreview";
 
-const Team: React.FC = () => {
+const HomePage = () => {
+  const postMetadata = getPostMetadata();
+
+  const president = postMetadata.filter(
+    (post) => post.designation === "President"
+  );
+
+  const vicePresident = postMetadata.filter(
+    (post) => post.designation === "Vice President"
+  );
+
+  const generalSecretary = postMetadata.filter(
+    (post) => post.designation === "General Secretary"
+  );
+
+  const soswcPresident = postMetadata.filter(
+    (post) => post.designation === "SOSWC - President"
+  );
+
+  const soswcVPresident = postMetadata.filter(
+    (post) => post.designation === "SOSWC - Vice President"
+  );
+
+  const treasurer = postMetadata.filter(
+    (post) => post.designation === "Treasurer"
+  );
+
+  const techLead = postMetadata.filter(
+    (post) => post.designation === "Technical Lead"
+  );
+
+  const webAdmin = postMetadata.filter(
+    (post) => post.designation === "Web Lead"
+  );
+
+  const domainLeads = [
+    "App Lead",
+    "AI/ML Lead",
+    "Competitive Programming and DSA Lead",
+    "Cybersecurity Lead",
+  ];
+
+  const communityLead = postMetadata.filter(
+    (post) => post.designation === "Community Lead"
+  );
+
+  const coLeads = ["Content Co-Lead", "Design Co-Lead"];
+
+  const alumniPosts = postMetadata.filter(
+    (post) => post.designation === "Alumni"
+  );
+
+  const coreMembersPosts = postMetadata.filter(
+    (post) =>
+      ![
+        "Alumni",
+        "President",
+        "Vice President",
+        "Technical Lead",
+        "Treasurer",
+        "SOSWC - Vice President",
+        "SOSWC - President",
+        "General Secretary",
+        "Web Lead",
+        "App Lead",
+        "AI/ML Lead",
+        "Competitive Programming and DSA Lead",
+        "Cybersecurity Lead",
+        "Content Co-Lead",
+        "Design Co-Lead",
+        "Community Lead",
+      ].includes(post.designation)
+  );
+
+  const presidentPreview = president.map((post) => <PostPreview {...post} />);
+
+  const vicePresidentPreview = vicePresident.map((post) => (
+    <PostPreview {...post} />
+  ));
+
+  const generalSecretaryPreview = generalSecretary.map((post) => (
+    <PostPreview {...post} />
+  ));
+
+  const soswcPresidentPreview = soswcPresident.map((post) => (
+    <PostPreview {...post} />
+  ));
+
+  const soswcVPresidentPreview = soswcVPresident.map((post) => (
+    <PostPreview {...post} />
+  ));
+
+  const treasurerPreview = treasurer.map((post) => <PostPreview {...post} />);
+
+  const techLeadPreview = techLead.map((post) => <PostPreview {...post} />);
+
+  const webAdminPreview = webAdmin.map((post) => <PostPreview {...post} />);
+
+  const domainLeadsPreview = postMetadata
+    .filter((post) => domainLeads.includes(post.designation))
+    .map((post) => <PostPreview key={post.id} {...post} />);
+  6;
+
+  const coLeadsPreview = postMetadata
+    .filter((post) => coLeads.includes(post.designation))
+    .map((post) => <PostPreview key={post.id} {...post} />);
+  6;
+
+  const communityLeadPreview = communityLead.map((post) => (
+    <PostPreview {...post} />
+  ));
+
+  const alumniPreviews = alumniPosts.map((post) => <PostPreview {...post} />);
+  const coreMembersPreviews = coreMembersPosts.map((post) => (
+    <PostPreview {...post} />
+  ));
+
   return (
-    <div>
-      <div className="bg-black min-h-screen md:pt-20 pt-20 md:px-14 px-10 flex flex-col">
-        <h1 className="font-montserratB text-white text-3xl py-5">
-          Co-ordinators
-        </h1>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 py-3 gap-y-10">
-          <MemberCard
-            name="Dr. Mustafa Basthikodi"
-            role="Faculty Co-ordinator"
-            imageSrc="https://avatars1.githubusercontent.com/srajankumar"
-          />
-        </div>
-        <h1 className="font-montserratB text-white text-3xl py-5">
-          Core Members
-        </h1>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 py-3 gap-y-10">
-          <MemberCard
-            name="Deveesh Shetty"
-            role="President"
-            imageSrc="https://avatars1.githubusercontent.com/Deveesh-Shetty"
-          />
-          <MemberCard
-            name="Varshaa Shetty"
-            role="Vice President"
-            imageSrc="https://avatars1.githubusercontent.com/shettyvarshaa"
-          />
-          <MemberCard
-            name="Tejas Nayak B"
-            role="General Secretary"
-            imageSrc="https://avatars1.githubusercontent.com/tejasnayak1"
-          />
-          <MemberCard
-            name="Srajan Kumar"
-            role="Web Lead"
-            imageSrc="https://avatars1.githubusercontent.com/srajankumar"
-          />
-          <MemberCard
-            name="Tejas GK"
-            role="Web Lead"
-            imageSrc="https://avatars1.githubusercontent.com/tejas-gk"
-          />
-          <MemberCard
-            name="Tejas Nayak"
-            role="Member"
-            imageSrc="https://avatars1.githubusercontent.com/TejasNayak42"
-          />
-        </div>
-        <h1 className="font-montserratB text-white text-3xl py-5">Alumni</h1>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 py-3 gap-y-10">
-          <MemberCard
-            name="Deveesh Shetty"
-            role="President"
-            imageSrc="https://avatars1.githubusercontent.com/Deveesh-Shetty"
-          />
-          <MemberCard
-            name="Varshaa Shetty"
-            role="Vice President"
-            imageSrc="https://avatars1.githubusercontent.com/shettyvarshaa"
-          />
-          <MemberCard
-            name="Tejas Nayak B"
-            role="General Secretary"
-            imageSrc="https://avatars1.githubusercontent.com/tejasnayak1"
-          />
-          <MemberCard
-            name="Srajan Kumar"
-            role="Web Lead"
-            imageSrc="https://avatars1.githubusercontent.com/srajankumar"
-          />
-          <MemberCard
-            name="Tejas GK"
-            role="Web Lead"
-            imageSrc="https://avatars1.githubusercontent.com/tejas-gk"
-          />
-          <MemberCard
-            name="Tejas Nayak"
-            role="Member"
-            imageSrc="https://avatars1.githubusercontent.com/TejasNayak42"
-          />
-        </div>
+    <div className="bg-black min-h-screen md:pt-20 pt-20 md:px-14 px-5 flex flex-col">
+      <h1 className="font-montserratB text-white text-3xl py-5">
+        Core Members
+      </h1>{" "}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 gap-y-10">
+        {presidentPreview}
+        {vicePresidentPreview}
+        {generalSecretaryPreview}
+        {soswcPresidentPreview}
+        {soswcVPresidentPreview}
+        {treasurerPreview}
+        {techLeadPreview}
+        {webAdminPreview}
+        {domainLeadsPreview}
+        {coreMembersPreviews}
+        {coLeadsPreview}
+        {communityLeadPreview}
+      </div>
+      <h1 className="font-montserratB text-white text-3xl py-5">Alumni</h1>{" "}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 gap-y-10">
+        {alumniPreviews}
       </div>
     </div>
   );
 };
 
-export default Team;
+export default HomePage;
