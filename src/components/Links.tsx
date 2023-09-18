@@ -3,15 +3,16 @@ import Link from "next/link";
 interface LinkProps {
   href: string;
   text: string;
+  target: string;
 }
 
-const Links: FC<LinkProps> = ({ href, text }) => {
+const Links: FC<LinkProps> = ({ href, text, target }) => {
   return (
     <div className="pt-2">
       <Link
         className="hover:underline decoration-chartreuse-100 underline-offset-8"
         href={href}
-        target="blank"
+        target={target}
       >
         {text}
       </Link>

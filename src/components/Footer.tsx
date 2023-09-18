@@ -18,19 +18,23 @@ const Footer = () => {
           <div className="flex flex-grow md:pl-20 mb-10 mx-6 md:mt-0 mt-10 ">
             <div className="lg:w-1/2 md:w-1/2 w-full px-4">
               <div className="flex text-white flex-col">
-                <Link href={githubLink} text="GitHub" />
-                <Link href={linkedinLink} text="LinkedIn" />
-                <Link href={instagramLink} text="Instagram" />
-                <Link href={facebookLink} text="Facebook" />
-                <Link href={twitterLink} text="Twitter" />
+                <Link href={githubLink} target="_blank" text="GitHub" />
+                <Link href={linkedinLink} target="_blank" text="LinkedIn" />
+                <Link href={instagramLink} target="_blank" text="Instagram" />
+                <Link href={facebookLink} target="_blank" text="Facebook" />
+                <Link href={twitterLink} target="_blank" text="Twitter" />
               </div>
             </div>
             <div className="lg:w-1/2 md:w-1/2 w-full px-4">
               <div className="flex text-white flex-col">
-                <Link href={youtubeLink} text="Youtube" />
-                <Link href={discordLink} text="Discord" />
-                <Link href={communityGuidelines} text="Community Guidelines" />
-                <Link href="#" text="Donate" />
+                <Link href={youtubeLink} target="_blank" text="Youtube" />
+                <Link href={discordLink} target="_blank" text="Discord" />
+                <Link
+                  href={communityGuidelines}
+                  target="_blank"
+                  text="Community Guidelines"
+                />
+                <Link href="#" target="_blank" text="Donate" />
               </div>
             </div>
           </div>
@@ -88,6 +92,7 @@ const Footer = () => {
               575007 IN
             </p>
             <Link
+              target="_blank"
               text="sosc@sahyadri.edu.in"
               href="mailto:sosc@sahyadri.edu.in"
             />
