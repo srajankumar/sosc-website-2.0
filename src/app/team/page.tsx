@@ -73,29 +73,45 @@ const HomePage = () => {
       ].includes(post.designation)
   );
 
-  const presidentPreview = president.map((post) => <PostPreview {...post} />);
+  const presidentPreview = president.map((post) => (
+    <PostPreview key={post.id} {...post} />
+  ));
 
   const vicePresidentPreview = vicePresident.map((post) => (
-    <PostPreview {...post} />
+    <PostPreview key={post.id} {...post} />
   ));
 
   const generalSecretaryPreview = generalSecretary.map((post) => (
-    <PostPreview {...post} />
+    <PostPreview key={post.id} {...post} />
   ));
 
   const soswcPresidentPreview = soswcPresident.map((post) => (
-    <PostPreview {...post} />
+    <PostPreview key={post.id} {...post} />
   ));
 
   const soswcVPresidentPreview = soswcVPresident.map((post) => (
-    <PostPreview {...post} />
+    <PostPreview key={post.id} {...post} />
   ));
 
-  const treasurerPreview = treasurer.map((post) => <PostPreview {...post} />);
+  const treasurerPreview = treasurer.map((post) => (
+    <PostPreview key={post.id} {...post} />
+  ));
 
-  const techLeadPreview = techLead.map((post) => <PostPreview {...post} />);
+  const techLeadPreview = techLead.map((post) => (
+    <PostPreview key={post.id} {...post} />
+  ));
 
-  const webAdminPreview = webAdmin.map((post) => <PostPreview {...post} />);
+  const webAdminPreview = webAdmin.map((post) => (
+    <PostPreview key={post.id} {...post} />
+  ));
+
+  const communityLeadPreview = communityLead.map((post) => (
+    <PostPreview key={post.id} {...post} />
+  ));
+
+  const coreMembersPreviews = coreMembersPosts.map((post) => (
+    <PostPreview key={post.id} {...post} />
+  ));
 
   const domainLeadsPreview = postMetadata
     .filter((post) => domainLeads.includes(post.designation))
@@ -106,14 +122,6 @@ const HomePage = () => {
     .filter((post) => coLeads.includes(post.designation))
     .map((post) => <PostPreview key={post.id} {...post} />);
   6;
-
-  const communityLeadPreview = communityLead.map((post) => (
-    <PostPreview {...post} />
-  ));
-
-  const coreMembersPreviews = coreMembersPosts.map((post) => (
-    <PostPreview {...post} />
-  ));
 
   return (
     <div className="bg-black min-h-screen md:pt-20 pt-20 md:px-14 px-5 flex flex-col">

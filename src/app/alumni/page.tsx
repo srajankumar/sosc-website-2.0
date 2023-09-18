@@ -7,7 +7,9 @@ const HomePage = () => {
     (post) => post.designation === "Alumni"
   );
 
-  const alumniPreviews = alumniPosts.map((post) => <PostPreview {...post} />);
+  const alumniPreviews = alumniPosts.map((post) => (
+    <PostPreview key={post.id} {...post} />
+  ));
 
   return (
     <div className="bg-black min-h-screen md:pt-20 pt-20 md:px-14 px-5 flex flex-col">
