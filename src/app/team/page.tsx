@@ -163,7 +163,7 @@ const HomePage = () => {
         {communityLeadPreview}
       </div>
       <div className="font-montserratB text-white text-center mt-10">
-        <Links href="/alumni" target="" text="Meet our outstanding alumni" />
+        <Links href="/alumni" target="" text="Meet our Amazing Alumni!" />
       </div>
     </div>
   );

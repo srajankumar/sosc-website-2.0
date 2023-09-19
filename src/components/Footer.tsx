@@ -14,7 +14,7 @@ const Footer = () => {
   return (
     <div className="bg-black">
       <footer className="body-font tracking-wider">
-        <div className="container md:py-20 py-10 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
+        <div className="container md:pt-14 pb-10 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
           <div className="flex flex-grow md:pl-20 mb-10 mx-6 md:mt-0 mt-10 ">
             <div className="lg:w-1/2 md:w-1/2 w-full px-4">
               <div className="flex text-white flex-col">
@@ -100,7 +100,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="text-white">
-          <p className="pb-4 px-5 text-center">
+          <p className="pb-5 px-5 text-center">
             SOSC © {new Date().getFullYear()}
           </p>
         </div>
