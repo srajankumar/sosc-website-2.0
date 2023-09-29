@@ -1,9 +1,10 @@
 import HorizontalScroll from "@/components/Home/HorizontalScroll";
 import TextScroll from "@/components/Home/TextScroll";
 import Hero from "@/components/Home/Hero";
-import About from "@/components/Home/About";
 import Team from "@/components/Home/Team";
 import Line from "@/components/Home/Line";
+
+import About from "@/components/Description";
 export default function Home() {
   return (
     <div>

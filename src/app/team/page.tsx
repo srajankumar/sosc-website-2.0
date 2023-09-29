@@ -124,12 +124,12 @@ const HomePage = () => {
   6;
 
   return (
-    <div className="bg-black min-h-screen md:pt-20 pt-20 md:px-14 px-5 flex flex-col">
-      <h1 className="font-montserratB text-white text-3xl py-5">
+    <div className="bg-white min-h-screen md:pt-20 pt-20 md:px-14 px-5 flex flex-col">
+      <h1 className="font-montserratB text-black text-3xl py-5">
         Co-ordinators
       </h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 gap-y-10">
-        <div className="flex hover:border-chartreuse-200 border-2 border-black transition duration-300 px-5 items-center w-full h-[7rem] bg-gradient-to-br from-black via-[#111111] via-70% to-[#212121] to-100% rounded-3xl">
+        <div className="flex hover:shadow-xl aaa transition duration-300 px-5 items-center w-full h-[7rem] rounded-3xl">
           <div className="rounded-full">
             <Image
               className="w-20 h-20 rounded-full"
@@ -139,13 +139,13 @@ const HomePage = () => {
               height={500}
             />
           </div>
-          <div className="text-white w-3/4 px-5 font-montserratB">
+          <div className="text-black w-3/4 px-5 font-montserratB">
             <h1 className="py-1">Dr. Mustafa Basthikodi</h1>
             <p className="font-montserratR text-sm">Faculty Co-ordinator</p>
           </div>
         </div>
       </div>
-      <h1 className="font-montserratB text-white text-3xl py-5">
+      <h1 className="font-montserratB text-black text-3xl py-5">
         Core Members
       </h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 gap-y-10">
