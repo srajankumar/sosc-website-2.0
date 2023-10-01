@@ -4,11 +4,13 @@ import { useInView, motion } from "framer-motion";
 import { useRef } from "react";
 import { slideUp } from "./animation";
 import Rounded from "../../common/RoundedButton";
-export default function index() {
+
+export default function Index() {
   const phrase =
     "SOSC is a conglomeration of clubs and individuals who contribute to the community by helping us conduct events and activities. there are numerous clubs and experts who help shape the community to be pro-active. Mozilla Campus Clubs, Developer Students clubs, and the GitHub Campus Expert are to name a few.";
   const description = useRef(null);
   const isInView = useInView(description);
+
   return (
     <div className="h-full flex justify-center">
       <div ref={description} className={styles.description}>
@@ -36,7 +38,7 @@ export default function index() {
           </div>
           <div data-scroll data-scroll-speed={0.1}>
             <Rounded className={`py-10 md:py-0 w-72 ${styles.button}`}>
-              <img src="/assets/home/rocket.png" />
+              <img src="/assets/home/rocket.png" alt="Rocket" />
             </Rounded>
           </div>
         </div>
