@@ -37,7 +37,9 @@
     "src/lib/api.jsx",
     "src/app/team/page.jsx",
     "src/app/team/page.jsx",
-    "src/utils/readMarkdownData.jsx"
+    "src/utils/readMarkdownData.jsx",
+    "src/components/Description/index.jsx",
+    "src/components/Description/index.jsx"
   ],
   "exclude": ["node_modules"]
 }
