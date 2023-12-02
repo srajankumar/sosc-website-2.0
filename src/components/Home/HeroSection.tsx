@@ -7,10 +7,10 @@ const HeroSection = forwardRef<HTMLOptionElement, HeroSectionProps>(
     return (
       <div>
         <section
-          className="min-h-screen flex items-center p-20 bg-black"
+          className="min-h-screen flex items-center xl:px-4 py-20 bg-black"
           ref={ref}
         >
-          <div className="absolute w-4/5 font-montserratB md:left-[3.5rem] left-[1.69rem] text-white ">
+          <div className="xl:mx-12 lg:px-20 md:px-14 px-7 font-montserratB text-white ">
             <div className="lg:text-7xl heading  translate-y-24 md:text-6xl text-5xl md:leading-[4rem] lg:leading-[4.96rem]">
               Sahyadri Open Source{" "}
               <span className="text-chartreuse-200">Community</span>
@@ -24,7 +24,7 @@ const HeroSection = forwardRef<HTMLOptionElement, HeroSectionProps>(
               </p>
               <Link
                 href="/"
-                className="md:grow clip-path opacity-0 translate-y-24 form flex mt-7 text-sm justify-center rounded-full items-center bg-chartreuse-200 text-black w-[7.25rem] h-[2.125rem]"
+                className="md:grow clip-path opacity-0 translate-y-24 form flex mt-7 text-sm justify-center rounded-full items-center bg-chartreuse-200 hover:bg-white text-black w-[7.25rem] h-[2.125rem]"
               >
                 Learn More
               </Link>
