@@ -6,10 +6,8 @@ module.exports = {
     "./components/**/*.{ts,tsx}",
     "./app/**/*.{ts,tsx}",
     "./src/**/*.{ts,tsx}",
-    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
+  prefix: "",
   theme: {
     container: {
       center: true,
@@ -19,15 +17,9 @@ module.exports = {
       },
     },
     extend: {
-      fontFamily: {
-        montserratR: ["Montserrat-Regular", "mono"],
-        montserratB: ["Montserrat-Bold", "mono"],
-
-        Poppins: "Poppins",
-      },
       colors: {
         chartreuse: {
-          100: "#70ff07",
+          100: "#02b839",
           200: "#70ff00",
         },
         border: "hsl(var(--border))",
@@ -71,12 +63,12 @@ module.exports = {
       },
       keyframes: {
         "accordion-down": {
-          from: { height: 0 },
+          from: { height: "0" },
           to: { height: "var(--radix-accordion-content-height)" },
         },
         "accordion-up": {
           from: { height: "var(--radix-accordion-content-height)" },
-          to: { height: 0 },
+          to: { height: "0" },
         },
       },
       animation: {

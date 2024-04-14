@@ -2,12 +2,12 @@ import { siteConfig } from "@/config/site";
 import ScrollObserver from "@/hooks/use-scroll-observer";
 import "./globals.css";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Montserrat } from "next/font/google";
 import Cursor from "@/components/Cursor";
 import Script from "next/script";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-const inter = Inter({ subsets: ["latin"] });
+const montserrat = Montserrat({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: {
@@ -68,7 +68,7 @@ export default function RootLayout({
           strategy="beforeInteractive"
         />
       </head>
-      <body className={inter.className}>
+      <body className={montserrat.className}>
         <Navbar />
         <Cursor />
         <ScrollObserver>{children}</ScrollObserver>

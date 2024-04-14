@@ -29,7 +29,7 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     "src/components/Hero.jsx",
-    "src/components/Home/Hero.jsx",
+    "src/components/Home/Hero.tsx",
     "src/app/test/page.tsx",
     "src/app/test/page.tsx",
     "src/app/test/page.tsx",

@@ -15,7 +15,7 @@ const TextScroll: React.FC<Props> = () => {
 
   const refContainer = useRef<HTMLDivElement>(null);
 
-  const noOfParagraphs = 3;
+  const noOfParagraphs = 4;
   let sectionProgress = 0;
 
   // Make sure refContainer.current is defined before accessing it
@@ -47,16 +47,39 @@ const TextScroll: React.FC<Props> = () => {
               opacity: opacityForBlock(sectionProgress, 0),
             }}
           >
-            Lorem ipsum dolor sit,
+            May
           </div>
-          <span
+          <div
+            className="skillsText"
+            style={{
+              opacity: opacityForBlock(sectionProgress, 1),
+            }}
+          >
+            The Source
+          </div>
+          <div
+            className="skillsText"
+            style={{
+              opacity: opacityForBlock(sectionProgress, 2),
+            }}
+          >
+            Be
+          </div>
+          <div
+            className="skillsText"
+            style={{
+              opacity: opacityForBlock(sectionProgress, 3),
+            }}
+          >
+            With You
+          </div>
+          {/* <span
             className="skillsText inline-block after:contents-['']"
             style={{
               opacity: opacityForBlock(sectionProgress, 1),
             }}
           >
-            Lorem ipsum dolor sit amet.amet consectetur adipisicing elit.
-            Deleniti, temporibus?
+            The Source
           </span>
           <span
             className="skillsText inline-block"
@@ -66,7 +89,7 @@ const TextScroll: React.FC<Props> = () => {
           >
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti,
             temporibus?
-          </span>
+          </span> */}
         </div>
       </div>
     </div>

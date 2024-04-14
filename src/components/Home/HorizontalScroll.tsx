@@ -42,7 +42,7 @@ function HorizontailScroll() {
         <div
           id="scroll"
           ref={scroller}
-          className=" flex overflow-x-hidden text-white w-[400vw] m-0 bg-black  relative h-screen"
+          className=" flex overflow-x-hidden text-white w-[400vw] m-0 bg-black relative h-[100dvh]"
         >
           <section
             ref={scroll}
