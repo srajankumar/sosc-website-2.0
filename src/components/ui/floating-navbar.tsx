@@ -1,57 +1,65 @@
 "use client";
-import React, { useState, useEffect } from "react";
-
+import React, { useState } from "react";
+import {
+  motion,
+  AnimatePresence,
+  useScroll,
+  useMotionValueEvent,
+} from "framer-motion";
+import { cn } from "@/lib/utils";
 import Link from "next/link";
-import Image from "next/image";
 
-import { FloatingNav } from "@/components/ui/floating-navbar";
+export const FloatingNav = ({
+  className,
+}: {
+  navItems: {
+    name: string;
+    link: string;
+    icon?: JSX.Element;
+  }[];
+  className?: string;
+}) => {
+  const { scrollYProgress } = useScroll();
 
-const Navbar: React.FC = () => {
-  const [isNavVisible, setIsNavVisible] = useState(false);
+  const [visible, setVisible] = useState(false);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollPosition = window.scrollY;
-      const isVisible = scrollPosition > 100; // Adjust this value based on when you want the navbar to appear
+  useMotionValueEvent(scrollYProgress, "change", (current) => {
+    // Check if current is not undefined and is a number
+    if (typeof current === "number") {
+      let direction = current! - scrollYProgress.getPrevious()!;
 
-      setIsNavVisible(isVisible);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    // Cleanup the event listener when the component unmounts
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
-  const navItems = [
-    {
-      name: "Home",
-      link: "/",
-      icon: <div className="h-4 w-4 text-neutral-500 dark:text-white" />,
-    },
-    {
-      name: "About",
-      link: "/about",
-      icon: <div className="h-4 w-4 text-neutral-500 dark:text-white" />,
-    },
-    {
-      name: "Contact",
-      link: "/contact",
-      icon: <div className="h-4 w-4 text-neutral-500 dark:text-white" />,
-    },
-  ];
+      if (scrollYProgress.get() < 0.0) {
+        setVisible(false);
+      } else {
+        if (direction < 0) {
+          setVisible(true);
+        } else {
+          setVisible(false);
+        }
+      }
+    }
+  });
 
   return (
-    <div>
-      <FloatingNav navItems={navItems} />
-      <nav
-        className={`absolute z-50 justify-center bg-black text-white w-full items-center transition-opacity duration-300 ${
-          isNavVisible ? "opacity-0 hidden" : " opacity-100 flex"
-        }`}
+    <AnimatePresence mode="wait">
+      <motion.div
+        initial={{
+          opacity: 1,
+          y: -100,
+        }}
+        animate={{
+          y: visible ? 0 : -100,
+          opacity: visible ? 1 : 0,
+        }}
+        transition={{
+          duration: 0.2,
+        }}
+        className={cn(
+          "fixed z-50 justify-center bg-black text-white w-full items-center",
+          className
+        )}
       >
-        <div className="w-full px-5 md:flex-row flex-col max-w-7xl flex justify-between md:items-center items-start py-6">
+        <div className="w-full px-5 mx-auto md:flex-row flex-col max-w-7xl flex justify-between md:items-center items-start py-6">
           <Link href="/">
             <svg
               width="67.248604"
@@ -124,9 +132,7 @@ const Navbar: React.FC = () => {
             </li>
           </ul>
         </div>
-      </nav>
-    </div>
+      </motion.div>
+    </AnimatePresence>
   );
 };
-
-export default Navbar;
