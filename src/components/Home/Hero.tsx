@@ -34,7 +34,7 @@ const Hero = () => {
         },
       }}
     >
-      <section className="w-full max-w-7xl mx-auto min-h-[100dvh] px-5 py-12 md:grid flex flex-col-reverse md:grid-cols-2 md:justify-between justify-center items-center gap-10">
+      <section className="w-full text-white max-w-7xl mx-auto min-h-[100dvh] px-5 py-12 md:grid flex flex-col-reverse md:grid-cols-2 md:justify-between justify-center items-center gap-10">
         <div>
           <motion.div
             className="font-bold md:text-5xl text-4xl pb-5"

@@ -1,7 +1,7 @@
 const Events = () => {
   return (
-    <div className="bg-black h-screen flex justify-center items-center">
-      <h1 className="font-montserratB text-5xl text-white">Events</h1>
+    <div className="h-screen flex justify-center items-center">
+      <h1 className="font-bold text-5xl">Events</h1>
     </div>
   );
 };

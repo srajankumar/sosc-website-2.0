@@ -46,7 +46,7 @@ function HorizontailScroll() {
         >
           <section
             ref={scroll}
-            className="scroll-part  px-12 w-screen h-full bg-transparent ns-horizontal-section__item flex items-center z-50"
+            className="scroll-part px-12 w-screen h-full bg-transparent ns-horizontal-section__item flex items-center z-50"
           >
             <Image
               width={500}

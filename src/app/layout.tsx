@@ -70,7 +70,7 @@ export default function RootLayout({
       </head>
       <body className={montserrat.className}>
         <Navbar />
-        <Cursor />
+        {/* <Cursor /> */}
         <ScrollObserver>{children}</ScrollObserver>
         <Footer />
       </body>

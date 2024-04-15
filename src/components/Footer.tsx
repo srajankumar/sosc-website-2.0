@@ -61,7 +61,7 @@ const Footer = () => {
                     Sahyadri Open Source Community
                   </span>
                 </Link>
-                <p className="pt-2">
+                <p className="pt-2 text-white">
                   Sahyadri College of Engineering and Management, Adyar,
                   Mangalore - 575007 IN
                 </p>

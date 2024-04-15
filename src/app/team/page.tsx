@@ -124,46 +124,64 @@ const HomePage = () => {
   6;
 
   return (
-    <div className="bg-white min-h-screen md:pt-20 pt-20 md:px-14 px-5 flex flex-col">
-      <h1 className="font-montserratB text-black text-3xl py-5">
-        Co-ordinators
-      </h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 gap-y-10">
-        <div className="flex hover:shadow-xl aaa transition duration-300 px-5 items-center w-full h-[7rem] rounded-3xl">
-          <div className="rounded-full">
+    <div className="bg-white">
+      <div className="bg-black md:py-20 py-14">
+        <h1 className="text-white pt-10 font-bold tracking-wide text-4xl md:text-5xl text-center">
+          Team
+        </h1>
+      </div>
+      <div className="max-w-7xl mx-auto px-5 min-h-[100dvh] flex flex-col">
+        <h1 className="font-semibold mt-10 mb-5 text-black text-2xl py-5">
+          Co-ordinators
+        </h1>
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10">
+          <div className="relative flex flex-col">
             <Image
-              className="w-20 h-20 rounded-full"
-              src="/assets/team/mustafa_basthikodi.jpg"
-              alt=""
+              className="z-10 mt-0 rotate-0 right-3 left-0 absolute w-16"
+              src="/assets/team/tilted-box.png"
+              alt="logo"
               width={500}
               height={500}
-            />
-          </div>
-          <div className="text-black w-3/4 px-5 font-montserratB">
-            <h1 className="py-1">Dr. Mustafa Basthikodi</h1>
-            <p className="font-montserratR text-sm">Faculty Co-ordinator</p>
+            ></Image>
+            <Image
+              className="bg-black ml-0 rounded-md mt-7 z-10 absolute w-24 h-24 aspect-square object-cover"
+              src="/assets/team/mustafa_basthikodi.jpg"
+              alt="speaker"
+              width={500}
+              height={500}
+            ></Image>
+            <div className="ml-10 mt-[3.4rem] shadow-lg text-black hover:shadow-xl transition-all duration-200 rounded-xl">
+              <div className="mt-5 ml-20 my-5 mr-5 flex flex-col gap-1">
+                <h1 className="font-medium tracking-wide text-lg">
+                  Dr. Mustafa Basthikodi
+                </h1>
+                <h3 className="font-medium text-black/75 tracking-wider text-sm">
+                  Faculty Co-ordinator
+                </h3>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-      <h1 className="font-montserratB text-black text-3xl py-5">
-        Core Members
-      </h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 gap-y-10">
-        {presidentPreview}
-        {vicePresidentPreview}
-        {generalSecretaryPreview}
-        {treasurerPreview}
-        {soswcPresidentPreview}
-        {soswcVPresidentPreview}
-        {techLeadPreview}
-        {webAdminPreview}
-        {domainLeadsPreview}
-        {coreMembersPreviews}
-        {coLeadsPreview}
-        {communityLeadPreview}
-      </div>
-      <div className="font-montserratB text-white text-center mt-10">
-        <Links href="/alumni" target="" text="Meet our Amazing Alumni!" />
+        <h1 className="font-semibold mt-10 mb-5 text-black text-2xl py-5">
+          Core Members
+        </h1>
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10">
+          {presidentPreview}
+          {vicePresidentPreview}
+          {generalSecretaryPreview}
+          {treasurerPreview}
+          {soswcPresidentPreview}
+          {soswcVPresidentPreview}
+          {techLeadPreview}
+          {webAdminPreview}
+          {domainLeadsPreview}
+          {coreMembersPreviews}
+          {coLeadsPreview}
+          {communityLeadPreview}
+        </div>
+        <div className="font-montserratB text-white text-center mt-10">
+          <Links href="/alumni" target="" text="Meet our Amazing Alumni!" />
+        </div>
       </div>
     </div>
   );
